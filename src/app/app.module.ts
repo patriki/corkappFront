@@ -1,15 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 import { Routes, RouterModule } from '@angular/router';
+import { routes } from './app.routing';
+
+import { CorkService } from './services/cork.service';
+import { SessionService } from './services/session.service';
 
 import { AppComponent } from './app.component';
 import { CorkComponent } from './components/cork/cork.component';
 import { NoteTxtComponent } from './components/note-txt/note-txt.component';
-
-import { CorkService } from './services/cork.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
-import { routes } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,13 @@ import { routes } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpModule
   ],
   providers: [
-    CorkService
+    CorkService,
+    SessionService
   ],
   bootstrap: [AppComponent]
 })
