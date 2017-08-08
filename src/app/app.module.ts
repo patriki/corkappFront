@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CorkComponent } from './component/cork/cork.component';
+import { CorkComponent } from './components/cork/cork.component';
 import { NoteTxtComponent } from './components/note-txt/note-txt.component';
+
+import { CorkService } from './services/cork.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,12 @@ import { NoteTxtComponent } from './components/note-txt/note-txt.component';
     NoteTxtComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    CorkService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,23 @@
 <p>
   note-txt works!
 </p>
-<div >
-  <label>title:</label>
-  <p>{{ title }}</p>
+<h2>notes:</h2>
 
-  <label>content:</label>
-  <p>{{ content }}</p>
-  
-  <label>owner:</label>
-  <label></label>
-  <button >edit</button>
-  <button >delete</button>
-  <label>shared</label>
+<div>
+  <div *ngFor="let noteTxt of noteTxts">
+    <label>ID:</label>
+    <h3> {{ noteTxt.id }} </h3>
+
+    <label>TITLE:</label>
+    <h3> {{ noteTxt.title }} </h3>
+
+    <label>CONTENT OF THE NOTE:</label>
+    <p> {{ noteTxt.contentNote }} </p>
+    <a>details</a>
+    <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
+-->
+    <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+
+  </div>
 
 </div>
