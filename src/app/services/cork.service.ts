@@ -6,10 +6,12 @@ import 'rxjs/add/operator/map';
 export class CorkService {
   BASE_URL: string = 'http://localhost:3000';
 
+  public cork = {};
+  
   constructor(private http: Http) { }
 
   createCork() {
-    return this.http.post(`${this.BASE_URL}/api/cork`)
+    return this.http.post(`${this.BASE_URL}/api/cork`, this.cork)
       .map((res) => res.json());
   }
 
