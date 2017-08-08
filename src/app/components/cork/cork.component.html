@@ -6,16 +6,26 @@
 <div>
   <div *ngFor="let cork of corks">
     <label>ID:</label>
-    <h3> {{ cork.id }} </h3>
+    <h3> {{ cork._id }} </h3>
 
     <label>TITLE:</label>
     <h3> {{ cork.title }} </h3>
 
-    <label>CONTENT OF THE CORK:</label>
+    <!-- <label>CONTENT OF THE CORK:</label>
     <p> {{ cork.contentCork }} </p>
-    <a>details</a>
+    <a>details</a> -->
     <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
 -->
   </div>
 
 </div>
+
+<!-- <h1>Phone list</h1>
+<div class='phone'>
+  <div *ngFor="let phone of phones">
+    <img [src]="phone.image" />
+    <h3>{{ phone.name }}</h3>
+    <p>{{ phone.brand }}</p>
+    <a [routerLink]="['phone', phone._id]">View Details</a>
+  </div>
+</div>  -->

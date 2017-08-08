@@ -7,19 +7,19 @@ export class CorkService {
   BASE_URL: string = 'http://localhost:3000';
 
   public cork = {};
-  
+
   constructor(private http: Http) { }
 
-  createCork() {
-    return this.http.post(`${this.BASE_URL}/api/cork`, this.cork)
-      .map((res) => res.json());
-  }
-
-  //este no se si hace falta:
-  // getCorks() {
-  //   return this.http.get(`${this.BASE_URL}/api/cork`)
+  // createCork() {
+  //   return this.http.post(`${this.BASE_URL}/api/cork`, this.cork)
   //     .map((res) => res.json());
   // }
+
+  // este no se si hace falta:
+  getCorks() {
+    return this.http.get(`${this.BASE_URL}/api/cork`)
+      .map((res) => res.json());
+  }
 
   get(id) {
     return this.http.get(`${this.BASE_URL}/api/cork/${id}`)

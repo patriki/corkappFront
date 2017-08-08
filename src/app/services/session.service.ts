@@ -3,19 +3,48 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
+import { Router, CanActivate } from '@angular/router';
 
 @Injectable()
-export class SessionService {
+export class SessionService implements CanActivate {
   BASE_URL: string = 'http://localhost:3000';
 
   public user = {};
-  public token = {};
+  public token = '';
   public isAuthenticated = false;
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http,
+    private router: Router
+  ) { }
 
   handleError(e) {
     return Observable.throw(e.json().message);
+  }
+
+  canActivate(): Observable<boolean> | boolean {
+    let token = localStorage.getItem('token');
+
+    if (token) {
+      let headers = new Headers({ 'Authorization': `JWT ${token}` });
+      let options = new RequestOptions({ headers: headers });
+
+      return this.http.get(`${this.BASE_URL}/api/user/token`, options)
+        .map((data) => {
+          if (data) {
+            this.isAuthenticated = true;
+            this.token = token;
+            this.user = data.json().user;
+            return true;
+          }
+          return false;
+        });
+    }
+    else {
+      this.logout();
+      this.router.navigate(['/login']);
+      return false;
+    }
   }
 
   login(user) {
@@ -32,10 +61,19 @@ export class SessionService {
             username: user.username
           }
           this.isAuthenticated = true;
+          localStorage.setItem('token', this.token);
         }
 
         return this.isAuthenticated;
 
       }).catch(this.handleError);
+  }
+
+  logout() {
+    this.token = '';
+    this.user = {};
+    this.isAuthenticated = false;
+    localStorage.removeItem('token');
+    this.router.navigate(['login']);
   }
 }
