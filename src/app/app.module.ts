@@ -7,12 +7,17 @@ import { CorkComponent } from './components/cork/cork.component';
 import { NoteTxtComponent } from './components/note-txt/note-txt.component';
 
 import { CorkService } from './services/cork.service';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { routes } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     CorkComponent,
-    NoteTxtComponent
+    NoteTxtComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
