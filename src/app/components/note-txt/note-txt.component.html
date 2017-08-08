@@ -3,21 +3,43 @@
 </p>
 <h2>notes:</h2>
 
-<div>
-  <div  class="note" *ngFor="let noteTxt of noteTxts">
-    <label>ID:</label>
-    <h3> {{ noteTxt.id }} </h3>
-
-    <label>TITLE:</label>
-    <h3> {{ noteTxt.title }} </h3>
-
-    <label>CONTENT OF THE NOTE:</label>
-    <p> {{ noteTxt.contentNote }} </p>
-    <a>details</a>
-    <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
--->
-    <button (click)="onTodoDelete()" type="button" name="button">delete</button>
-
+  <div ngDraggable class="note" *ngFor="let noteTxt of noteTxts">
+    <div class="title-zone">
+      <h3> {{ noteTxt.title }} </h3>
+    </div>
+    <div class="note-txt-zone">
+      <p> {{ noteTxt.contentNote }} </p>
+    </div>
+    <div>
+      <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+    </div>
   </div>
 
+
+
+  <div ngDraggable>
+    <div class="note">Luis, dimito.</div>
+      <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      <script type="text/javascript">
+        $(function() {
+          $(".note").draggable();
+        });
+      </script>
+  </div>
+
+
+
+<div ngDraggable class="note">
+  <div class="title-zone">
+    <h3> {{ noteTxt.title }} </h3>
+  </div>
+  <div class="note-txt-zone">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png" alt="Smiley face" width="42" height="42">
+  </div>
+  <div>
+    <input type="image" src="./icon-delete-note.png" alt="Submit" width="40" height="40">
+    <input type="image" src="icon-edit-note.png" alt="Submit" width="40" height="40">
+
+    <!-- <button (click)="onTodoDelete()" type="button" name="button">delete</button> -->
+  </div>
 </div>
