@@ -1,18 +1,59 @@
-<h2>Login</h2>
+<!-- <div class="login-box">
+  <h1>corckapp</h1>
+  <h2>Login</h2>
 
-<form>
-  <div *ngIf="error">
-    {{ error }}
-  </div>
-  <p>
-    <label for="username">Username</label>
-    <input type="text" [(ngModel)]="user.username" name="username">
-  </p>
+  <form>
+    <div *ngIf="error">
+      {{ error }}
+    </div>
+    <p>
+      <label for="username">Username</label>
+      <input type="text" [(ngModel)]="user.username" name="username">
+    </p>
 
-  <p>
-    <label for="password">Password</label>
-    <input type="password" [(ngModel)]="user.password" name="password">
-  </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="user.password" name="password">
+    </p>
 
-  <button (click)="login()">Login</button>
-</form>
+    <button (click)="login()">Login</button>
+  </form>
+
+  <h2>Still not a member? <a href="#">Sign up</a></h2>
+
+</div> -->
+<ul>
+  <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
+  <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
+</ul>
+
+<div class="login-container">
+  <h1>corckapp</h1>
+
+    <div class="note-blue">
+      <div class="note-blue_content">
+          <h2>Login</h2>
+
+          <form>
+            <div *ngIf="error">
+              {{ error }}
+            </div>
+            <p>
+              <input class="text-box-style" type="text" [(ngModel)]="user.username" name="username" placeholder="Username">
+            </p>
+            <p>
+              <input class="text-box-style" type="password" [(ngModel)]="user.password" name="password" placeholder="Password">
+            </p>
+            <button (click)="login()"><img src="../../assets/button-login.png" alt=""></button>
+          </form>
+
+          <h3>Still not a member? <a href="#">Sign up</a></h3>
+
+          <div class="shadow shadow--right"></div>
+          <div class="shadow shadow--corner"></div>
+          <div class="shadow shadow--bottom"></div>
+      </div>
+      <div class="trapezoid"></div>
+    </div>
+
+</div>
