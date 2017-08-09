@@ -3,44 +3,60 @@
 </p>
 <h2>notes:</h2>
 
-  <div ngDraggable class="note" *ngFor="let noteTxt of noteTxts">
+<!-- <img ngDraggable src="http://www.docenciapositiva.com/chincheta_azul.png" alt=""> -->
+
+  <article ngDraggable class="note" *ngFor="let noteTxt of noteTxts">
+    <div class="note_content">
+        <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
+        <div class="note-txt-zone"><p> {{ noteTxt.contentNote }} </p></div>
+
+        <div>
+          <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+          <button (click)="onTodoDelete()" type="button" name="button">edit</button>
+        </div>
+
+        <div class="shadow shadow--right"></div>
+        <div class="shadow shadow--corner"></div>
+        <div class="shadow shadow--bottom"></div>
+    </div>
+    <div class="trapezoid"></div>
+    <img src="../../assets/icon-pin.png" alt="" class="pin">
+  </article>
+
+
+
+  <article ngDraggable class="note">
+    <div class="note_content">
+        <div class="title-zone"><h4> Luis, dimito</h4></div>
+
+        <div>
+          <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+          <button (click)="onTodoDelete()" type="button" name="button">edit</button>
+        </div>
+
+        <div class="shadow shadow--right"></div>
+        <div class="shadow shadow--corner"></div>
+        <div class="shadow shadow--bottom"></div>
+    </div>
+    <div class="trapezoid"></div>
+    <img src="../../assets/icon-pin.png" alt="" class="pin">
+  </article>
+
+
+
+
+
+  <article ngDraggable class="note">
     <div class="title-zone">
-      <h3> {{ noteTxt.title }} </h3>
+      <h3>Sin titulo </h3>
     </div>
     <div class="note-txt-zone">
-      <p> {{ noteTxt.contentNote }} </p>
+      <img src="../../assets/icon-pin.png" alt="Smiley face" width="42" height="42">
     </div>
     <div>
-      <button (click)="onTodoDelete()" type="button" name="button">delete</button>
-      <button (click)="onTodoDelete()" type="button" name="button">edit</button>
+      <input type="image" src="../../assets/icon-delete-note.png" alt="Submit">
+      <input type="image" src="../../assets/icon-edit-note.png" alt="Submit">
+
+      <!-- <button (click)="onTodoDelete()" type="button" name="button">delete</button> -->
     </div>
-  </div>
-
-
-
-  <div ngDraggable>
-    <div class="note">Luis, dimito.</div>
-      <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-      <script type="text/javascript">
-        $(function() {
-          $(".note").draggable();
-        });
-      </script>
-  </div>
-
-
-
-<div ngDraggable class="note">
-  <div class="title-zone">
-    <h3> {{ noteTxt.title }} </h3>
-  </div>
-  <div class="note-txt-zone">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png" alt="Smiley face" width="42" height="42">
-  </div>
-  <div>
-    <input type="image" src="./icon-delete-note.png" alt="Submit" width="40" height="40">
-    <input type="image" src="icon-edit-note.png" alt="Submit" width="40" height="40">
-
-    <!-- <button (click)="onTodoDelete()" type="button" name="button">delete</button> -->
-  </div>
-</div>
+  </article>

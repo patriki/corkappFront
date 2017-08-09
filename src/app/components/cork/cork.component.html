@@ -3,7 +3,7 @@
 </p>
 <h2>show all the corks:</h2>
 
-<div>
+<!-- <div>
   <div *ngFor="let cork of corks">
     <label>ID:</label>
     <h3> {{ cork.id }} </h3>
@@ -14,8 +14,8 @@
     <label>CONTENT OF THE CORK:</label>
     <p> {{ cork.contentCork }} </p>
     <a>details</a>
-    <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
--->
-  </div>
+</div> -->
 
-</div>
+    <div class="cork-board">
+      <app-note-txt></app-note-txt>
+    </div>
