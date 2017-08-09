@@ -26,7 +26,7 @@ export class CorkService {
       .map((res) => res.json());
   }
 
-  get(id) {
+  getCork(id) {
     return this.http.get(`${this.BASE_URL}/api/cork/${id}`, this.requestOptions())
       .map((res) => res.json());
   }

@@ -14,6 +14,7 @@ import { CorkComponent } from './components/cork/cork.component';
 import { NoteTxtComponent } from './components/note-txt/note-txt.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { CorksComponent } from './components/corks/corks.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './components/login/login.component';
     CorkComponent,
     NoteTxtComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    CorksComponent
   ],
   imports: [
     BrowserModule,

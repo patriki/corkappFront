@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CorkService } from '../../services/cork.service';
 
 @Component({
@@ -15,13 +15,23 @@ export class CorkComponent implements OnInit {
   //   { id: 302, title: 'cork3', contentCork: ['note1', 'note2','note3'] }
   // ];
 
-  corks;
+  cork;
 
-  constructor(private cork: CorkService) { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private corkService: CorkService
+  ) { }
 
   ngOnInit() {
-    this.cork.getCorks().subscribe((corks) => {
-      this.corks = corks;
+    this.route.params.subscribe(params => {
+      this.getCorkDetails(params['id']);
+    })
+  }
+
+  getCorkDetails(id) {
+    this.corkService.getCork(id).subscribe((cork) => {
+      this.cork = cork;
     })
   }
 

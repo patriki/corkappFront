@@ -1,0 +1,11 @@
+<h2>Corks:</h2>
+
+<div *ngFor="let cork of corks">
+  <a [routerLink]="['/corks', cork._id]">
+    <label>ID:</label>
+    <h3> {{ cork._id }} </h3>
+
+    <label>TITLE:</label>
+    <h3> {{ cork.title }} </h3>
+  </a>
+</div>
