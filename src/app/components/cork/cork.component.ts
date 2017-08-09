@@ -15,7 +15,7 @@ export class CorkComponent implements OnInit {
   //   { id: 302, title: 'cork3', contentCork: ['note1', 'note2','note3'] }
   // ];
 
-  cork;
+  cork = {};
 
   constructor(
     private router: Router,
@@ -31,7 +31,7 @@ export class CorkComponent implements OnInit {
 
   getCorkDetails(id) {
     this.corkService.getCork(id).subscribe((cork) => {
-      this.cork = cork;
+      this.cork = cork[0];
     })
   }
 

@@ -1,23 +1,17 @@
-<p>
-  note-txt works!
-</p>
-<h2>notes:</h2>
+<article ngDraggable class="note" *ngFor="let noteTxt of noteTxts">
+    <div class="note_content">
+        <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
+        <div class="note-txt-zone"><p> {{ noteTxt.contentNote }} </p></div>
 
-<div>
-  <div *ngFor="let noteTxt of noteTxts">
-    <label>ID:</label>
-    <h3> {{ noteTxt.id }} </h3>
+       <div>
+          <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+          <button (click)="onTodoDelete()" type="button" name="button">edit</button>
+        </div>
 
-    <label>TITLE:</label>
-    <h3> {{ noteTxt.title }} </h3>
-
-    <label>CONTENT OF THE NOTE:</label>
-    <p> {{ noteTxt.contentNote }} </p>
-    <a>details</a>
-    <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
--->
-    <button (click)="onTodoDelete()" type="button" name="button">delete</button>
-
-  </div>
-
-</div>
+       <div class="shadow shadow--right"></div>
+        <div class="shadow shadow--corner"></div>
+        <div class="shadow shadow--bottom"></div>
+    </div>
+    <div class="trapezoid"></div>
+    <img src="../icon-pin.png" alt="">
+  </article>

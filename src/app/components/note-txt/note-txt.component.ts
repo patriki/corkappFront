@@ -8,12 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./note-txt.component.css']
 })
 export class NoteTxtComponent implements OnInit {
-  noteTxts: Array<Object> = [
-    { id: 100, title: 'nota1', contentNote: 'content of note1' },
-    { id: 201, title: 'nota2', contentNote: 'content of note2' },
-    { id: 302, title: 'nota3', contentNote: 'content of note3' }
-  ];
-
 
   constructor() { }
 

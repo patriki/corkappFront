@@ -1,1 +1,20 @@
-<p>Cork works!</p>
+<div class="cork-board">
+  <article ngDraggable class="note" *ngFor="let noteTxt of cork.contentCork">
+      <div class="note_content">
+          <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
+          <div class="note-txt-zone"><p> {{ noteTxt.contentNote }} </p></div>
+
+         <div>
+            <button (click)="onTodoDelete()" type="button" name="button">delete</button>
+            <button (click)="onTodoDelete()" type="button" name="button">edit</button>
+          </div>
+
+         <div class="shadow shadow--right"></div>
+          <div class="shadow shadow--corner"></div>
+          <div class="shadow shadow--bottom"></div>
+      </div>
+      <div class="trapezoid"></div>
+      <img src="../icon-pin.png" alt="">
+    </article>
+  <app-note-txt></app-note-txt>
+</div>
