@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx';
+import { SessionService } from './session.service';
 
 @Injectable()
 export class CorkService {
@@ -8,7 +10,10 @@ export class CorkService {
 
   public cork = {};
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http,
+    private session: SessionService
+  ) { }
 
   // createCork() {
   //   return this.http.post(`${this.BASE_URL}/api/cork`, this.cork)
@@ -17,12 +22,12 @@ export class CorkService {
 
   // este no se si hace falta:
   getCorks() {
-    return this.http.get(`${this.BASE_URL}/api/cork`)
+    return this.http.get(`${this.BASE_URL}/api/cork`, this.requestOptions())
       .map((res) => res.json());
   }
 
   get(id) {
-    return this.http.get(`${this.BASE_URL}/api/cork/${id}`)
+    return this.http.get(`${this.BASE_URL}/api/cork/${id}`, this.requestOptions())
       .map((res) => res.json());
   }
   //ESTO NO ESTÁ HECHO:
@@ -36,4 +41,9 @@ export class CorkService {
   //   return this.http.delete(`${this.BASE_URL}/api/phones/${id}`)
   //     .map((res) => res.json());
   // }
+
+  private requestOptions(): RequestOptions {
+    let headers = new Headers({ 'Authorization': `JWT ${this.session.token}` });
+    return new RequestOptions({ headers: headers });
+  }
 }

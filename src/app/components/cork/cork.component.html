@@ -1,24 +1,15 @@
-<p>
-  cork works!
-</p>
-<h2>show all the corks:</h2>
+<h2>Corks:</h2>
 
-<div>
-  <div *ngFor="let cork of corks">
+<div *ngFor="let cork of corks">
+  <!-- <a [routerLink]="['/cork', cork._id]"> -->
     <label>ID:</label>
     <h3> {{ cork._id }} </h3>
 
     <label>TITLE:</label>
     <h3> {{ cork.title }} </h3>
-
-    <!-- <label>CONTENT OF THE CORK:</label>
-    <p> {{ cork.contentCork }} </p>
-    <a>details</a> -->
-    <!--<a [routerLink]="['/notetxt', noteTxt.id]"> details</a>
--->
-  </div>
-
+  <!-- </a> -->
 </div>
+
 
 <!-- <h1>Phone list</h1>
 <div class='phone'>
