@@ -1,0 +1,141 @@
+/*.note{
+  width: 15vw;
+  position: relative;
+  background: #f7efba;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: -1px 2px 3px #ddd;
+  font-family: 'Pangolin', cursive;
+  display: inline-block;
+}
+
+.note-txt-zone{
+  padding: 10px;
+  background-color: #f7eb9f;
+  border-radius: 2px;
+}
+
+.note:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    border-color: #f5e57f #fff;
+    border-width: 30px 30px 0 0;
+    border-style: solid;
+  }*/
+
+
+/*************************/
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*body {
+  background-color: #fff;
+  background-image: url(https://fadigeorge.files.wordpress.com/2011/06/cork.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  color: #444;
+  font-family: 'Amatic SC', cursive;
+  font-size: 16px;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 2em;
+}*/
+
+
+p {
+  margin-bottom: 10px;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.note {
+  display: inline-block;
+}
+.note .pin {
+  position: absolute;
+  top: -3vh;
+  left: 7vw;
+}
+.pin{
+    z-index: 5000000;
+}
+.note_content {
+  background: #fbee9a;
+  background: linear-gradient(to bottom, #fbee9a 0%, #fbee9a 50%, #f7eca7 100%);
+  border-top: 4px solid #f9e669;
+  height: 100%;
+  /*min-height: 250px;*/
+  padding: 50px 20px 8px 20px;
+  position: relative;
+  width: 15vw;
+}
+.note_content:before {
+  background: transparent;
+  border-color: #e8d558 transparent;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  bottom: -20px;
+  content: '';
+  position: absolute;
+  right: 0;
+}
+.note_content .shadow {
+  background: transparent;
+  position: absolute;
+  z-index: -1;
+}
+.note_content .shadow.shadow--corner {
+  bottom: 8.33333px;
+  box-shadow: 0 29px 7px 0 rgba(0, 0, 0, 0.75);
+  height: 2px;
+  right: 18px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 22.5px;
+  z-index: inherit;
+}
+.note_content .shadow.shadow--right {
+  box-shadow: 123px 0 17px 9px rgba(0, 0, 0, 0.3);
+  height: calc(100% - 20px);
+  right: 129.84615px;
+  top: 25px;
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+  width: 100px;
+}
+.note_content .shadow.shadow--bottom {
+  bottom: 113px;
+  box-shadow: 0 139px 21px -4px rgba(0, 0, 0, 0.5);
+  height: 20px;
+  left: 4px;
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+  width: 14vw;
+}
+
+.trapezoid {
+  border-top: 20px solid #f7eca7;
+  border-right: 20px solid transparent;
+  height: 0;
+  /*width: 300px;*/
+}
+
+.pin--outside {
+  width: 80px;
+  position: absolute;
+}

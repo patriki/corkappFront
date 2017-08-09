@@ -16,6 +16,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { CorksComponent } from './components/corks/corks.component';
 
+import { AngularDraggableModule } from 'angular2-draggable';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { CorksComponent } from './components/corks/corks.component';
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularDraggableModule
   ],
   providers: [
     CorkService,
