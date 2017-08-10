@@ -6,7 +6,14 @@ body{
 
 
 
-/*STYLES FOR STANDARD NOTE:*/
+
+
+
+
+
+
+
+/**********************************************************STYLES FOR STANDARD NOTE:*/
 *,
 *:after,
 *:before {
@@ -93,7 +100,7 @@ h4 {
   width: 14vw;
 }
 
-.trapezoid {
+.note .trapezoid {
   border-top: 20px solid #f7eca7;
   border-right: 20px solid transparent;
   height: 0;

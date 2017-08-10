@@ -1,3 +1,5 @@
+/*STYLES LOGIN AND SIGN UP***********************************************************************************************/
+
 .login-signup-container {
   background-color: #fff;
   /*background-image: url(https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg);*/
@@ -36,7 +38,7 @@
   width: 100vw;
 }
 
-.info-login{
+.info-login-signup{
   position: absolute;
 top: 0;
 left: 0;
@@ -50,19 +52,29 @@ margin: auto;
 h1{
   font-family: 'Raleway', sans-serif;
   color: #fff;
-  font-size: 10vw;
+  font-size: 6vw;
   text-align: center;
   margin: 0 0 30px 0;
 }
 
-h2{
+.note-blue h2{
   font-family: 'Raleway', sans-serif;
   color:#5caac3;
   margin: 0 0 30px 0;
   font-size: 4vw;
 }
 
-/**********************************************/
+.header h2{
+  font-family: 'Raleway', sans-serif;
+  color:#fff;
+  margin: 30px 0;
+  font-size: 3vw;
+  font-weight: 800;
+}
+
+
+
+/******************************************************************************/
 
 *,
 *:after,
@@ -86,9 +98,12 @@ h4 {
 .note-blue {
   display: inline-block;
   position: absolute;
-  top: 32vh;
-  left: 34vw;
+
   z-index: inherit;
+}
+.nb-login-position{
+  top: 38vh;
+  left: 34vw;  
 }
 
 .note-blue .pin {
@@ -101,7 +116,7 @@ h4 {
 }
 .note-blue_content {
   background: #98d8f1;
-  background: linear-gradient(to bottom, #c4efff 0%, #ddf6ff 50%, #f1fbff 100%);
+  background: linear-gradient(to bottom, #b1eaff 0%, #b1eaff 50%, #ddf5ff 100%);
   border-top: 4px solid #75dcff;
   height: 100%;
   padding: 50px;
@@ -153,8 +168,8 @@ h4 {
   width: 26vw;
 }
 
-.trapezoid {
-  border-top: 20px solid #f1fbff;
+.note-blue .trapezoid {
+  border-top: 20px solid #ddf5ff;
   border-right: 20px solid transparent;
   height: 0;
   /*width: 300px;*/
@@ -164,7 +179,6 @@ h4 {
   width: 80px;
   position: absolute;
 }
-
 
 
 /**************************************/
@@ -190,11 +204,49 @@ h4 {
   width: 100%;
 }
 
+.text-box-style::placeholder {
+  color: #524c4a;
+}
+
+.text-box-style-big{
+  font-size: 100%;
+  /* padding: 10px 20px 0px 2px; */
+  /* margin: 5px 0; */
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  /* border-radius: 0; */
+  /* transition: all 400ms ease; */
+  color: #fff;
+  text-align: center;
+  /* width: 70%; */
+}
+.text-box-style-big::placeholder {
+  color: #ddd;
+  text-align: center;
+}
+
 button {
   border:none;
   background-color: transparent;
   margin: 20px 0;
+  display: inline-block;
 }
+
+.loupe{
+  width: 80%;
+  height: 80%;
+  float: left;
+}
+
 a, a:active, a:checked {
   color: #5caac3;
 }

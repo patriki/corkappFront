@@ -1,23 +1,42 @@
-<h2>Signup</h2>
 
-<form>
-  <div *ngIf="error">
-    {{ error }}
+<div class="login-signup-container">
+  <div class="overlay">
+    <img class="fondo" src="https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg" alt="">
   </div>
-  <p>
-    <label for="email">Email</label>
-    <input type="email" [(ngModel)]="user.email" name="email">
-  </p>
+  <div class="info-login-signup">
+    <div class="header">
+      <h2>corckapp</h2>
 
-  <p>
-    <label for="username">Username</label>
-    <input type="text" [(ngModel)]="user.username" name="username">
-  </p>
+    </div>
 
-  <p>
-    <label for="password">Password</label>
-    <input type="password" [(ngModel)]="user.password" name="password">
-  </p>
+    <div class="note-blue nb-signup-position">
+      <div class="note-blue_content">
+          <h2>Sign up</h2>
 
-  <button (click)="signup()">Signup</button>
-</form>
+          <form>
+            <div *ngIf="error">
+              {{ error }}
+            </div>
+            <p>
+              <input class="text-box-style" type="email" [(ngModel)]="user.email" name="email" placeholder="email">
+            </p>
+
+            <p>
+              <input class="text-box-style" type="text" [(ngModel)]="user.username" name="username" placeholder="Username">
+            </p>
+
+            <p>
+              <input class="text-box-style" type="password" [(ngModel)]="user.password" name="password" placeholder="Password">
+            </p>
+
+            <button (click)="signup()"><img src="../../assets/button-login.png" alt=""></button>
+          </form>
+
+          <div class="shadow shadow--right"></div>
+          <div class="shadow shadow--corner"></div>
+          <div class="shadow shadow--bottom"></div>
+      </div>
+      <div class="trapezoid"></div>
+    </div>
+</div>
+</div>
