@@ -1,33 +1,46 @@
-<!-- <div class="login-box">
-  <h1>corckapp</h1>
-  <h2>Login</h2>
 
-  <form>
-    <div *ngIf="error">
-      {{ error }}
-    </div>
-    <p>
-      <label for="username">Username</label>
-      <input type="text" [(ngModel)]="user.username" name="username">
-    </p>
-
-    <p>
-      <label for="password">Password</label>
-      <input type="password" [(ngModel)]="user.password" name="password">
-    </p>
-
-    <button (click)="login()">Login</button>
-  </form>
-
-  <h2>Still not a member? <a href="#">Sign up</a></h2>
-
-</div> -->
 <ul>
   <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
   <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
 </ul>
 
-<div class="login-container">
+<!-- <div class="login-signup-container">
+    <h1>corckapp</h1>
+
+    <div class="note-blue">
+      <div class="note-blue_content">
+          <h2>Signup</h2>
+
+          <form>
+            <div *ngIf="error">
+              {{ error }}
+            </div>
+            <p>
+              <input class="text-box-style" type="text" [(ngModel)]="user.username" name="username" placeholder="Username">
+            </p>
+            <p>
+              <input class="text-box-style" type="password" [(ngModel)]="user.password" name="password" placeholder="Password">
+            </p>
+            <p>
+              <input class="text-box-style" type="password" [(ngModel)]="user.email" name="email" placeholder="email">
+            </p>
+            <button (click)="login()"><img src="../../assets/button-login.png" alt=""></button>
+          </form>
+
+          <div class="shadow shadow--right"></div>
+          <div class="shadow shadow--corner"></div>
+          <div class="shadow shadow--bottom"></div>
+      </div>
+      <div class="trapezoid"></div>
+    </div>
+</div> -->
+
+
+<div class="login-signup-container">
+  <div class="overlay">
+    <img class="fondo" src="https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg" alt="">
+  </div>
+  <div class="info-login">
   <h1>corckapp</h1>
 
     <div class="note-blue">
@@ -55,5 +68,5 @@
       </div>
       <div class="trapezoid"></div>
     </div>
-
+</div>
 </div>

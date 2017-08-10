@@ -1,6 +1,6 @@
-.login-container {
+.login-signup-container {
   background-color: #fff;
-  background-image: url(https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg);
+  /*background-image: url(https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg);*/
   background-position: center;
   background-repeat: repeat;
   color       : #444;
@@ -8,13 +8,44 @@
   font-size   : 16px;
   font-weight : 300;
   font-size   : 1rem;
-  padding     : 2em;
+  /*padding     : 2em;*/
   width:        100vw;
   height:       100vh;
   z-index: -10;
   text-align: center;
-
 }
+.overlay {
+    position: relative;
+    transition: all 1s;
+}
+
+.overlay:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+.fondo{
+  width: 100vw;
+}
+
+.info-login{
+  position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+text-align: center;
+padding-top: 3em;
+margin: auto;
+}
+
 
 h1{
   font-family: 'Raleway', sans-serif;
@@ -57,6 +88,7 @@ h4 {
   position: absolute;
   top: 32vh;
   left: 34vw;
+  z-index: inherit;
 }
 
 .note-blue .pin {
@@ -103,7 +135,7 @@ h4 {
   z-index: inherit;
 }
 .note-blue_content .shadow.shadow--right {
-  box-shadow: 123px 0 17px 9px rgba(0, 0, 0, 0.3);
+  box-shadow: 122px 0 11px 12px rgba(0, 0, 0, 0.4);
   height: calc(100% - 20px);
   right: 129.84615px;
   top: 25px;
@@ -113,12 +145,12 @@ h4 {
 }
 .note-blue_content .shadow.shadow--bottom {
   bottom: 113px;
-  box-shadow: 0 139px 21px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 137px 17px 5px rgba(0, 0, 0, 0.5);
   height: 20px;
   left: 4px;
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg);
-  width: 14vw;
+  width: 26vw;
 }
 
 .trapezoid {
@@ -140,6 +172,7 @@ h4 {
 .text-box-style{
   font-size: 140%;
   padding: 10px 20px 0px 2px;
+  margin: 5px 0;
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #7e8286;
