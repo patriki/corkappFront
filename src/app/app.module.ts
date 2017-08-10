@@ -18,7 +18,6 @@ import { LoginComponent } from './components/login/login.component';
 import { CorksComponent } from './components/corks/corks.component';
 
 import { AngularDraggableModule } from 'angular2-draggable';
-import { ModalComponent } from './components/note-txt/modal/modal.component';
 
 
 @NgModule({

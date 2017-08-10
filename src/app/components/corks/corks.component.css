@@ -1,4 +1,4 @@
-/*STYLES LOGIN AND SIGN UP***********************************************************************************************/
+/*STYLES LOGIN, SIGN UP AND CORKS:***********************************************************************************************/
 
 .login-signup-container {
   background-color: #fff;
@@ -118,7 +118,7 @@ h4 {
   height: 100%;
   padding: 50px;
   position: relative;
-  width: 28vw;
+  width: 100%;
 }
 
 .note-white_content:before {
@@ -172,9 +172,16 @@ h4 {
   /*width: 300px;*/
 }
 
-.pin--outside {
-  width: 80px;
-  position: absolute;
+/**************************************/
+
+.cork-block{
+  display: inline-block;
+  padding: 20px 30px;
+}
+
+.space-newcork{
+  background:rgba(255,255,255,0.3);
+  border-radius: 5px;
 }
 
 

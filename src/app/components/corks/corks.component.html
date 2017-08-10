@@ -7,27 +7,24 @@
     <div class="header">
       <h2>corckapp</h2>
 
-    </div>icon-cork.png
+    </div>
 
     <div class="note-white nb-signup-position">
       <div class="note-white_content">
           <h2>Your corks</h2>
 
-          <div *ngFor="let cork of corks">
-            <a [routerLink]="['/corks', cork._id]">
-              <img src="../../assets/icon-cork.png" alt="">
-            </a>
+          <div class="cork-block" *ngFor="let cork of corks">
+            <a [routerLink]="['/corks', cork._id]"><img src="../../assets/icon-cork.png" alt=""></a>
 
               <!-- <label>ID:</label>
               <h3> {{ cork._id }} </h3>
-
               <label>TITLE:</label> -->
               <h3> {{ cork.title }} </h3>
           </div>
 
 
-          <div>
-            <a [routerLink]="['/corks', cork._id]"><img src="../../assets/icon-newcork.png" alt=""></a>
+          <div class="space-newcork cork-block">
+            <a><img src="../../assets/icon-newcork.png" alt=""></a>
             <h3>Add a new cork</h3>
           </div>
 
