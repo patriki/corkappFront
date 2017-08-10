@@ -20,7 +20,7 @@
           <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
           <div class="note-txt-zone"><p> {{ noteTxt.contentNote }} </p></div>
          <div>
-           <input type="image" src="../../assets/icon-delete-note.png" alt="Submit">
+           <input type="image" (click)="deleteNote(noteTxt._id)" src="../../assets/icon-delete-note.png" alt="Submit">
            <input type="image" src="../../assets/icon-edit-note.png" alt="Submit">
 
           </div>
