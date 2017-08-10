@@ -15,10 +15,10 @@ export class CorkService {
     private session: SessionService
   ) { }
 
-  // createCork() {
-  //   return this.http.post(`${this.BASE_URL}/api/cork`, this.cork)
-  //     .map((res) => res.json());
-  // }
+  createCork(cork) {
+    return this.http.post(`${this.BASE_URL}/api/cork`, cork)
+      .map((res) => res.json());
+  }
 
   // este no se si hace falta:
   getCorks() {
