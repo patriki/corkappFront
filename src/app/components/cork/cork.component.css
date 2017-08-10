@@ -29,8 +29,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  width: 105px;
-  height: 105px;
+  width: 112px;
+  height: 112px;
 }
 
 .bt-newnote{
@@ -41,8 +41,21 @@
   width: 105px;
   height: 105px;
 }
+.bt-logout{
+  background-image: url("../../../assets/icon-logout.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 160px;
+  height: 149px;
+}
+
 button {
   border:none;
   background-color: transparent;
   margin: 20px 0;
+}
+
+button:active, :focus, :checked{
+	outline:0px;
 }
