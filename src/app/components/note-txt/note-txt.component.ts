@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { NoteTxtService } from '../../services/note-txt.service';
 
 
 @Component({
@@ -9,7 +10,20 @@ import { Router } from '@angular/router';
 })
 export class NoteTxtComponent implements OnInit {
 
-  constructor() { }
+  note : {
+    title: "Title",
+    creator: "",
+    contentNote: "Amazing note!",
+    cork: "",
+    isPrivate: true
+  }
+
+  error = null;
+
+  constructor(
+    private route: ActivatedRoute,
+    private noteTxtService: NoteTxtService
+  ) { }
 
   ngOnInit() {
   }

@@ -16,7 +16,7 @@ export class CorkService {
   ) { }
 
   createCork(cork) {
-    return this.http.post(`${this.BASE_URL}/api/cork`, cork)
+    return this.http.post(`${this.BASE_URL}/api/cork`, cork, this.requestOptions())
       .map((res) => res.json());
   }
 

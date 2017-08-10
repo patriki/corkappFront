@@ -1,7 +1,8 @@
 <div class="cork-board">
 
+  <button type="button" name="button" (click)="newNote()">Add note!</button>
 
-  <article ngDraggable class="note" *ngFor="let noteTxt of cork.contentCork">
+  <article ngDraggable class="note" *ngFor="let noteTxt of notes">
       <img src="../../assets/icon-pin.png" alt="" class="pin">
       <div class="note_content">
           <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
