@@ -1,7 +1,10 @@
 <div class="cork-board">
-
+<div class="header">
+    <h2>corckapp</h2>
+</div>
 
   <div class="bt-settings" ngDraggable></div>
+  <button type="button" name="button" (click)="newNote()"><div class="bt-newnote" ngDraggable></div></button>
 
 <!-- <div ngDraggable><input type="image" src="../../assets/icon-settings.png" alt="Submit"></div> -->
   <!-- <ul>
@@ -10,7 +13,6 @@
   <!-- </ul> -->
 
 
-  <button type="button" name="button" (click)="newNote()"><div class="bt-newnote" ngDraggable></div></button>
 
   <article ngDraggable class="note" *ngFor="let noteTxt of notes">
       <img src="../../assets/icon-pin.png" alt="" class="pin">

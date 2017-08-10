@@ -15,6 +15,15 @@
   height: 100vh;
 }
 
+.header h2{
+  font-family: 'Raleway', sans-serif;
+  color:#fff;
+  margin: 30px 0;
+  font-size: 3vw;
+  font-weight: 800;
+  text-align: center;
+}
+
 .bt-settings{
   background-image: url("../../../assets/icon-settings.png");
   background-size: contain;
