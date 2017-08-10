@@ -47,6 +47,10 @@ export class SessionService implements CanActivate {
     }
   }
 
+  signup(user) {
+    return this.http.post(`${this.BASE_URL}/api/user/signup`, user)
+  }
+
   login(user) {
     return this.http.post(`${this.BASE_URL}/api/user/login`, user)
       .map(res => {

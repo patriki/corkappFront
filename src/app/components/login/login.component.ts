@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   user: Object = {
     username: '',
-    password: '',
+    password: ''
   }
 
   error = null;
