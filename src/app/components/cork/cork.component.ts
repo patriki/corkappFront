@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CorkService } from '../../services/cork.service';
 import { NoteTxtService } from '../../services/note-txt.service';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-cork',
@@ -34,7 +35,8 @@ export class CorkComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private corkService: CorkService,
-    private noteTxtService: NoteTxtService
+    private noteTxtService: NoteTxtService,
+    private session: SessionService,
   ) { }
 
   ngOnInit() {
@@ -64,12 +66,16 @@ export class CorkComponent implements OnInit {
   deleteNote(noteId) {
     console.log(noteId);
     this.noteTxtService.deleteNote(noteId).subscribe((data) => {
-      console.log(data.note);
-      this.notes.splice(this.notes.indexOf(data.note), 1);
+      this.notes = this.notes.filter(function(note) {
+        return note._id !== noteId;
+      });
     },
     (err) => {
       this.error = err;
     })
   }
 
+  logOut() {
+      this.session.logout();
+  }
 }
