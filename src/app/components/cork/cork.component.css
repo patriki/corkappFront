@@ -1,5 +1,5 @@
 .cork-board {
-  background-color: $bg-color;
+  background-color: #fff;
   background-image: url(https://fadigeorge.files.wordpress.com/2011/06/cork.png);
   background-size: contain;
   background-position: center;
@@ -13,4 +13,27 @@
   z-index: -100;
   width: 100vw;
   height: 100vh;
+}
+
+.bt-settings{
+  background-image: url("../../../assets/icon-settings.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+}
+
+.bt-newnote{
+  background-image: url("../../../assets/icon-newnote.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 105px;
+  height: 105px;
+}
+button {
+  border:none;
+  background-color: transparent;
+  margin: 20px 0;
 }

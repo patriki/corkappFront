@@ -36,6 +36,7 @@ h4 {
 
 .note {
   display: inline-block;
+  margin: 5px;
 }
 .note .pin {
   position: relative;
