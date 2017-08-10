@@ -15,6 +15,7 @@ export class CorksComponent implements OnInit {
 
   ngOnInit() {
     this.corkService.getCorks().subscribe((corks) => {
+      console.log(corks);
       this.corks = corks;
     })
   }
