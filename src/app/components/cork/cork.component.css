@@ -49,6 +49,14 @@
   width: 160px;
   height: 149px;
 }
+.bt-user{
+  background-image: url("../../../assets/icon-user.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 95px;
+  height: 109px;
+}
 
 button {
   border:none;

@@ -1,21 +1,12 @@
 <div class="cork-board">
-<div class="header">
-    <h2>corckapp</h2>
+  <div class="header">
+      <h2>corckapp</h2>
 
-    <div class="bt-settings" ngDraggable alt="Settings"></div>
-    <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
-    <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
-</div>
-
-
-
-<!-- <div ngDraggable><input type="image" src="../../assets/icon-settings.png" alt="Submit"></div> -->
-  <!-- <ul>
-    <li></li>
-    <!-- <li ><a  class="nav-links" href="/logout"><img class="icon-big" src="../../assets/icon-settings.png" alt=""> </a></li> -->
-  <!-- </ul> -->
-
-
+      <a [routerLink]="['/corks']"><div class="bt-settings" ngDraggable alt="Settings"></div></a>
+      <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+      <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
+      <button type="button" name="button" (click)="user()" alt="User"><div class="bt-user" ngDraggable></div></button>
+  </div>
 
   <article ngDraggable class="note" *ngFor="let noteTxt of notes">
       <img src="../../assets/icon-pin.png" alt="" class="pin">
