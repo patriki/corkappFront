@@ -1,11 +1,13 @@
 <div class="cork-board">
 <div class="header">
     <h2>corckapp</h2>
+
+    <div class="bt-settings" ngDraggable alt="Settings"></div>
+    <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+    <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
 </div>
 
-  <div class="bt-settings" ngDraggable alt="Settings"></div>
-  <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
-  <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
+
 
 <!-- <div ngDraggable><input type="image" src="../../assets/icon-settings.png" alt="Submit"></div> -->
   <!-- <ul>
