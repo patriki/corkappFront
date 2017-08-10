@@ -59,6 +59,17 @@ export class CorkComponent implements OnInit {
     (err) => {
       this.error = err;
     })
-  };
+  }
+
+  deleteNote(noteId) {
+    console.log(noteId);
+    this.noteTxtService.deleteNote(noteId).subscribe((data) => {
+      console.log(data.note);
+      this.notes.splice(this.notes.indexOf(data.note), 1);
+    },
+    (err) => {
+      this.error = err;
+    })
+  }
 
 }

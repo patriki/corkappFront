@@ -16,8 +16,12 @@ export class NoteTxtService {
   ) { }
 
   createNote(note) {
-    console.log("Send:", note);
     return this.http.post(`${this.BASE_URL}/api/noteTxt`, note, this.requestOptions())
+      .map((res) => res.json());
+  }
+
+  deleteNote(id) {
+    return this.http.delete(`${this.BASE_URL}/api/noteTxt/${id}`, this.requestOptions())
       .map((res) => res.json());
   }
 
