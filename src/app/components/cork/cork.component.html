@@ -1,11 +1,13 @@
 <div class="cork-board">
 <div class="header">
     <h2>corckapp</h2>
+
+    <div class="bt-settings" ngDraggable alt="Settings"></div>
+    <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+    <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
 </div>
 
-  <div class="bt-settings" ngDraggable alt="Settings"></div>
-  <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
-  <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
+
 
 <!-- <div ngDraggable><input type="image" src="../../assets/icon-settings.png" alt="Submit"></div> -->
   <!-- <ul>
@@ -21,7 +23,7 @@
           <div class="title-zone"><h4> {{ noteTxt.title }} </h4></div>
           <div class="note-txt-zone"><p> {{ noteTxt.contentNote }} </p></div>
          <div>
-           <input type="image" src="../../assets/icon-delete-note.png" alt="Submit">
+           <input type="image" (click)="deleteNote(noteTxt._id)" src="../../assets/icon-delete-note.png" alt="Submit">
            <input type="image" src="../../assets/icon-edit-note.png" alt="Submit">
 
           </div>
@@ -32,8 +34,5 @@
       </div>
       <div class="trapezoid"></div>
     </article>
-
-
-  <app-note-txt></app-note-txt>
 
 </div>
