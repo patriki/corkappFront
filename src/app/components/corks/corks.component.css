@@ -1,0 +1,241 @@
+/*STYLES LOGIN AND SIGN UP***********************************************************************************************/
+
+.login-signup-container {
+  background-color: #fff;
+  /*background-image: url(https://st3.depositphotos.com/5579612/13563/i/1600/depositphotos_135631434-stock-photo-sticky-post-it-notes-in.jpg);*/
+  background-position: center;
+  background-repeat: repeat;
+  color       : #444;
+  font-family: 'Raleway', sans-serif;
+  font-size   : 16px;
+  font-weight : 300;
+  font-size   : 1rem;
+  /*padding     : 2em;*/
+  width:        100vw;
+  height:       100vh;
+  z-index: -10;
+  text-align: center;
+}
+.overlay {
+    position: relative;
+    transition: all 1s;
+}
+
+.overlay:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+.fondo{
+  width: 100vw;
+}
+
+.info-login-signup{
+  position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+text-align: center;
+padding-top: 3em;
+margin: auto;
+}
+
+
+h1{
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-size: 6vw;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.note-white h2{
+  font-family: 'Raleway', sans-serif;
+  color:#5caac3;
+  margin: 0 0 30px 0;
+  font-size: 4vw;
+}
+
+.header h2{
+  font-family: 'Raleway', sans-serif;
+  color:#fff;
+  margin: 30px 0;
+  font-size: 3vw;
+  font-weight: 800;
+}
+
+/******************************************************************************/
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.note-white {
+  display: inline-block;
+  position: absolute;
+  z-index: inherit;
+}
+.nb-signup-position{
+  top: 23vh;
+  left: 35vw;
+}
+
+.note-white .pin {
+  position: absolute;
+  top: -3vh;
+  left: 7vw;
+}
+.pin{
+    z-index: 5000000;
+}
+.note-white_content {
+  background: #98d8f1;
+  background: linear-gradient(to bottom, #b1eaff 0%, #b1eaff 50%, #ddf5ff 100%);
+  border-top: 4px solid #75dcff;
+  height: 100%;
+  padding: 50px;
+  position: relative;
+  width: 28vw;
+}
+
+.note-white_content:before {
+  background: transparent;
+  border-color: #a5e7ff transparent;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  bottom: -20px;
+  content: '';
+  position: absolute;
+  right: 0;
+}
+.note-white_content .shadow {
+  background: transparent;
+  position: absolute;
+  z-index: -1;
+}
+.note-white_content .shadow.shadow--corner {
+  bottom: 8.33333px;
+  box-shadow: 0 29px 7px 0 rgba(0, 0, 0, 0.75);
+  height: 2px;
+  right: 18px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 22.5px;
+  z-index: inherit;
+}
+.note-white_content .shadow.shadow--right {
+  box-shadow: 122px 0 11px 12px rgba(0, 0, 0, 0.4);
+  height: calc(100% - 20px);
+  right: 129.84615px;
+  top: 25px;
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+  width: 100px;
+}
+.note-white_content .shadow.shadow--bottom {
+  bottom: 113px;
+  box-shadow: 0 137px 17px 5px rgba(0, 0, 0, 0.5);
+  height: 20px;
+  left: 4px;
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+  width: 26vw;
+}
+
+.note-white .trapezoid {
+  border-top: 20px solid #ddf5ff;
+  border-right: 20px solid transparent;
+  height: 0;
+  /*width: 300px;*/
+}
+
+.pin--outside {
+  width: 80px;
+  position: absolute;
+}
+
+
+/**************************************/
+
+.text-box-style{
+  font-size: 140%;
+  padding: 10px 20px 0px 2px;
+  margin: 5px 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #7e8286;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 0;
+  transition: all 400ms ease;
+  color: #524c4a;
+  width: 100%;
+}
+
+.text-box-style::placeholder {
+  color: #524c4a;
+}
+
+.text-box-style-big{
+  font-size: 100%;
+  /* padding: 10px 20px 0px 2px; */
+  /* margin: 5px 0; */
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  /* border-radius: 0; */
+  /* transition: all 400ms ease; */
+  color: #fff;
+  text-align: center;
+  /* width: 70%; */
+}
+.text-box-style-big::placeholder {
+  color: #ddd;
+  text-align: center;
+}
+
+button {
+  border:none;
+  background-color: transparent;
+  margin: 20px 0;
+}
+a, a:active, a:checked {
+  color: #5caac3;
+}

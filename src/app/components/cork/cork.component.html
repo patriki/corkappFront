@@ -1,5 +1,11 @@
 <div class="cork-board">
 
+  <ul>
+    <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
+    <li><a class="nav-links" href="/logout"><img class="icon-big" src="/images/exit.png" alt=""> </a></li>
+  </ul>
+
+
   <button type="button" name="button" (click)="newNote()">Add note!</button>
 
   <article ngDraggable class="note" *ngFor="let noteTxt of notes">
