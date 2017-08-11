@@ -4,20 +4,26 @@
 
       <a [routerLink]="['/corks']"><div class="bt-settings" ngDraggable alt="Settings"></div></a>
       <button type="button" name="button" (click)="toggleNewNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
-      <form class="new-note-form" [ngClass]="{'isHidden': hide }">
-        <p>
-          <input type="text" [(ngModel)]="note.title" name="title" placeholder="Title">
-        </p>
 
-        <p>
-          <textarea [(ngModel)]="note.contentNote" name="contentNote" placeholder="Amazing note!"></textarea>
-        </p>
-
-        <button (click)="newNote(); toggleNewNote()">Save!</button>
-      </form>
       <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
       <button type="button" name="button" (click)="user()" alt="User"><div class="bt-user" ngDraggable></div></button>
+
   </div>
+
+
+
+  <!-- <form class="new-note-form" [ngClass]="{'isHidden': hide }">
+    <p>
+      <input type="text" [(ngModel)]="note.title" name="title" placeholder="Write a title">
+    </p>
+
+    <p>
+      <textarea [(ngModel)]="note.contentNote" name="contentNote" placeholder="Write the content of your note"></textarea>
+    </p>
+
+    <button (click)="newNote(); toggleNewNote()">Save!</button>
+  </form> -->
+
 
   <article ngDraggable class="note" *ngFor="let noteTxt of notes">
       <img src="../../assets/icon-pin.png" alt="" class="pin">
@@ -36,5 +42,28 @@
       </div>
       <div class="trapezoid"></div>
     </article>
+    <form class="new-note-form" [ngClass]="{'isHidden': hide }">
+      <article class="newnote">
+        <div class="newnote_content">
+                <div class="title-zone">
+                  <input class="text-box-note-style" type="text" [(ngModel)]="note.title" name="title" placeholder="Write a title">
+                </div>
+                <div class="note-txt-zone">
+                  <p>
+                    <textarea class="text-box-note-style-small size" [(ngModel)]="note.contentNote" name="contentNote" placeholder="Write the content of your note"></textarea>
+                  </p>
+                </div>
+
+                <div>
+                 <button (click)="newNote(); toggleNewNote()"><img src="../../assets/button-newnote.png" alt=""></button>
+                </div>
+
+           <div class="shadow shadow--right"></div>
+            <div class="shadow shadow--corner"></div>
+            <div class="shadow shadow--bottom"></div>
+        </div>
+        <div class="trapezoid"></div>
+      </article>
+    </form>
 
 </div>
