@@ -2,10 +2,11 @@
   <div class="header">
       <h2>corckapp</h2>
 
-      <a [routerLink]="['/corks']"><div class="bt-settings" ngDraggable alt="Settings"></div></a>
-      <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
-      <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
-      <button type="button" name="button" (click)="user()" alt="User"><div class="bt-user" ngDraggable></div></button>
+      <button type="button" name="button" (dblclick)="['/corks']" alt="Settings"><div class="bt-settings" ngDraggable></div></button>
+      <!-- <a [routerLink]="['/corks']"><div class="bt-settings" ngDraggable alt="Settings"></div></a> -->
+      <button type="button" name="button" (dblclick)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+      <button type="button" name="button" (dblclick)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
+      <button type="button" name="button" (dblclick)="user()" alt="User"><div class="bt-user" ngDraggable></div></button>
   </div>
 
   <article ngDraggable class="note" *ngFor="let noteTxt of notes">
