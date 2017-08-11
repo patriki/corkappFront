@@ -30,6 +30,11 @@ export class CorkService {
     return this.http.get(`${this.BASE_URL}/api/cork/${id}`, this.requestOptions())
       .map((res) => res.json());
   }
+
+  getPublicCork(friend) {
+    return this.http.post(`${this.BASE_URL}/api/user/public`, friend, this.requestOptions())
+      .map((res) => res.json());
+  }
   //ESTO NO ESTÁ HECHO:
   // edit(id) {
   //   return this.http.put(`${this.BASE_URL}/api/cork/${id}`)

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionService } from '../../services/session.service';
+import { CorkService } from '../../services/cork.service';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +17,11 @@ export class LoginComponent implements OnInit {
 
   error = null;
 
+  friend = "";
 
   constructor(
     private session: SessionService,
+    private corkService: CorkService,
     private router: Router
   ) { }
 
@@ -33,6 +36,16 @@ export class LoginComponent implements OnInit {
       (err) => {
         this.error = err;
       });
+  }
+
+  searchFriend(key) {
+    if(key.keyCode === 13) {
+      console.log(this.friend)
+      this.corkService.getPublicCork({friend: this.friend}).subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/corks/' + data]);
+      })
+    }
   }
 
 }
