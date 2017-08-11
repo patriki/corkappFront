@@ -3,7 +3,18 @@
       <h2>corckapp</h2>
 
       <a [routerLink]="['/corks']"><div class="bt-settings" ngDraggable alt="Settings"></div></a>
-      <button type="button" name="button" (click)="newNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+      <button type="button" name="button" (click)="toggleNewNote()" alt="New note"><div class="bt-newnote" ngDraggable></div></button>
+      <form class="new-note-form" [ngClass]="{'isHidden': hide }">
+        <p>
+          <input type="text" [(ngModel)]="note.title" name="title" placeholder="Title">
+        </p>
+
+        <p>
+          <textarea [(ngModel)]="note.contentNote" name="contentNote" placeholder="Amazing note!"></textarea>
+        </p>
+
+        <button (click)="newNote(); toggleNewNote()">Save!</button>
+      </form>
       <button type="button" name="button" (click)="logOut()" alt="Logout"><div class="bt-logout" ngDraggable></div></button>
       <button type="button" name="button" (click)="user()" alt="User"><div class="bt-user" ngDraggable></div></button>
   </div>

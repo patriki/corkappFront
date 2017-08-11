@@ -67,3 +67,14 @@ button {
 button:active, :focus, :checked{
 	outline:0px;
 }
+
+.new-note-form {
+  display: inline-block;
+  background-color: #fbee9a;
+  padding: 10px;
+  margin: 10px;
+}
+
+.isHidden {
+  display: none;
+}

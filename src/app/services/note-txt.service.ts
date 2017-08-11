@@ -25,6 +25,11 @@ export class NoteTxtService {
       .map((res) => res.json());
   }
 
+  editNote(id, note) {
+    return this.http.put(`${this.BASE_URL}/api/noteTxt/${id}`, note, this.requestOptions())
+      .map((res) => res.json());
+  }
+
   private requestOptions(): RequestOptions {
     let headers = new Headers({ 'Authorization': `JWT ${this.session.token}` });
     return new RequestOptions({ headers: headers });

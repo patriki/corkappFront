@@ -22,12 +22,14 @@ export class CorkComponent implements OnInit {
   notes = [];
 
   note = {
-    title: "Title",
+    title: "",
     creator: "",
-    contentNote: "Amazing note!",
+    contentNote: "",
     cork: "",
     isPrivate: true
   }
+
+  hide = true;
 
   error = null;
 
@@ -54,6 +56,10 @@ export class CorkComponent implements OnInit {
     })
   }
 
+  toggleNewNote() {
+    this.hide = !this.hide;
+  }
+
   newNote() {
     this.noteTxtService.createNote(this.note).subscribe((data) => {
       this.notes.push(data.note);
@@ -61,6 +67,8 @@ export class CorkComponent implements OnInit {
     (err) => {
       this.error = err;
     })
+    this.note.title = "";
+    this.note.contentNote = "";
   }
 
   deleteNote(noteId) {
@@ -74,6 +82,12 @@ export class CorkComponent implements OnInit {
       this.error = err;
     })
   }
+
+  // changeNote(noteId) {
+  //   this.noteTxtService.editNote(noteId, this.editedNote).subscribe((data) => {
+  //
+  //   })
+  // }
 
   logOut() {
       this.session.logout();
